@@ -1,0 +1,23 @@
+<div class="form-group has-error">
+															<label class="control-label col-md-3">Diffusions du rapport d'audit : </label>
+															<div class="col-md-4">
+																<select multiple="multiple" class="multi-select" id="my_multi_select1" name="auditee[]">
+																	<?php
+																	include_once 'bd.php';
+																	$req2=$connexion->query("select id, prenom, nom from utilisateur");
+																	
+																	$nbr1=$req2->rowcount();
+																	if($nbr1!=0){
+																	while  ($obj1 = $req2->Fetch(PDO::FETCH_ASSOC)) 
+																	{
+																	$id=$obj1['id'];
+																	$ret=$obj1['nom'];
+																	$ret2=$obj1['prenom'];
+																	echo '<option value="'.$id.'">'.$ret.' '.$ret2.'</option>';
+																	?>																	
+																	 <?php } } ?>
+																	 </select>
+																<span class="help-block">
+																 </span>
+															</div>
+						</div>

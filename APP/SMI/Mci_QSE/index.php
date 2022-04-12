@@ -1,0 +1,1 @@
+<?php header("Location: admin/404.html"); ?>

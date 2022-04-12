@@ -1,0 +1,133 @@
+
+			<center><small><font color="green">Gestion de la relation client</font></small></center>
+			</center></h3>		
+			<div class="page-bar">
+				<ul class="page-breadcrumb">
+					<li>
+						<i class="fa fa-shopping-basket"></i>
+						<a href="javascript:;" id="Acc">Gestion des commandes</a>
+						<i class="fa fa-angle-right"></i>
+					</li>
+					<li>
+						<i class="fa fa-plus"></i>
+						<a href="javascript:;" id="Acc">Ajouter Commande</a>
+						
+					</li>
+					
+				</ul>
+				<div class="page-toolbar">
+				</div>
+			</div>
+
+			<!-- END PAGE HEADER-->
+					
+	<!-- BEGIN PAGE CONTENT-->
+			<div class="row">
+				<div class="col-md-12">
+					<div class="tabbable tabbable-custom boxless tabbable-reversed">
+						
+						<div class="tab-content">
+							<div class="tab-pane active" id="tab_0">
+								<div class="portlet box green">
+									<div class="portlet-title">
+										<div class="caption">
+											<i class="fa fa-shopping-basket"></i>Enregistrement d'une nouvelle commande
+										</div>
+										<div class="tools">
+											<a href="javascript:;" class="collapse">
+											</a>
+											
+											<a href="javascript:;" class="remove">
+											</a>
+										</div>
+									</div>
+									<div class="portlet-body form">
+										<!-- BEGIN FORM-->
+										<form action="insuser.php" class="form-horizontal" method="POST">
+																																
+												
+												<div class="form-group">													
+													<div class="col-md-4">
+														<div class="input-icon right">		
+															<label class="col-md-3 control-label">Numéro de commande</label>
+															<input name="nom" class="form-control input-circle" placeholder="Numéro de commande" autocomplete="off" type="text">
+														</div>
+													</div>
+												</div>
+												
+												<div class="form-group has-error">
+															<label class="col-md-3 control-label">Client</label>
+															<div class="col-md-4">
+																<div class="select2-container select2me form-control" id="s2id_autogen1"><a href="javascript:void(0)" class="select2-choice" tabindex="-1">   <span class="select2-chosen" id="select2-chosen-2">Nouveau Client</span><abbr class="select2-search-choice-close"></abbr>   <span class="select2-arrow" role="presentation"><b role="presentation"></b></span></a><label for="s2id_autogen2" class="select2-offscreen"></label><input class="select2-focusser select2-offscreen" aria-haspopup="true" role="button" aria-labelledby="select2-chosen-2" id="s2id_autogen2" type="text"></div><select name="ser" class="select2me form-control select2-offscreen" onchange="getDepartements(this.value);" tabindex="-1" title="">
+																										
+																		<option value="21">Dr Achhal</option>	
+																	 <option value="1">Dr Amraou</option>															
+																	 <option value="2">Dr Aissaoui</option>																
+																	 <option value="3">Dr TAKI</option>																
+																												
+																	 </select>
+																<span class="help-block">
+																 </span>
+															</div>
+												</div>
+												<div class="form-group has-error">
+															<label class="col-md-3 control-label">Produit</label>
+															<div class="col-md-4">
+																<div class="select2-container select2me form-control" id="s2id_autogen1"><a href="javascript:void(0)" class="select2-choice" tabindex="-1">   <span class="select2-chosen" id="select2-chosen-2">Produit N°1</span><abbr class="select2-search-choice-close"></abbr>   <span class="select2-arrow" role="presentation"><b role="presentation"></b></span></a><label for="s2id_autogen2" class="select2-offscreen"></label><input class="select2-focusser select2-offscreen" aria-haspopup="true" role="button" aria-labelledby="select2-chosen-2" id="s2id_autogen2" type="text"></div><select name="ser" class="select2me form-control select2-offscreen" onchange="getDepartements(this.value);" tabindex="-1" title="">
+																						
+
+
+																	 <option value="1">TOUPAR  1L</option>																
+																	 <option value="21">VAXAID 100 ML</option>																
+																	 <option value="2">PNEUMEQUINE 1 ml</option>																
+																	 <option value="3">PREVICOX 57MG</option>																
+																												
+																	 																	 </select>
+																<span class="help-block">
+																 </span>
+															</div>
+												</div>
+												<div class="form-group has-error">
+															<label class="col-md-3 control-label">livraison</label>
+															<div class="col-md-4">
+																<div class="select2-container select2me form-control" id="s2id_autogen1"><a href="javascript:void(0)" class="select2-choice" tabindex="-1">   <span class="select2-chosen" id="select2-chosen-2">Mode de livraison</span><abbr class="select2-search-choice-close"></abbr>   <span class="select2-arrow" role="presentation"><b role="presentation"></b></span></a><label for="s2id_autogen2" class="select2-offscreen"></label><input class="select2-focusser select2-offscreen" aria-haspopup="true" role="button" aria-labelledby="select2-chosen-2" id="s2id_autogen2" type="text"></div><select name="ser" class="select2me form-control select2-offscreen" onchange="getDepartements(this.value);" tabindex="-1" title="">
+																	<option value="" selected="selected"></option>									
+
+
+																	 <option value="1">Entreprise</option>																
+																	 <option value="21">Client</option>																
+																	 <option value="2">Intérmediare</option>												
+																	 																
+																												
+																	 																	 </select>
+																<span class="help-block">
+																 </span>
+															</div>
+												</div>
+												<div class="form-group has-error">
+															<label class="col-md-1 control-label">Qte</label>
+															<div class="col-md-1">
+														<div class="input-icon right">															
+															<input name="nom" class="form-control input-circle" placeholder="" autocomplete="off" type="text">
+														</div>
+													</div>
+												</div>
+												<span id="blocDepartements"></span><br>
+												<div class="form-actions">
+												<div class="row">
+													<div class="col-md-offset-3 col-md-9">
+														<button type="submit" name="valider" class="btn btn-circle blue">Valider</button>
+														<button type="reset" class="btn btn-circle default">Annuler</button>
+													</div>
+												</div>
+											</div>
+											</div>
+																							
+														
+												
+										</form>
+										<!-- END FORM-->
+									</div>
+								</div>
+								
+		
